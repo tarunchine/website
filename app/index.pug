@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+    head
+        title My Website
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css", rel="stylesheet")
+        link(href="scss/app.scss", rel="stylesheet")
+        
+    body
+        div.page
+            include views/nav
+            div.content
+                include views/home
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js")
+        script(src="js/script.js")
