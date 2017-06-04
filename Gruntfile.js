@@ -7,12 +7,12 @@ module.exports = function (grunt) {
         sass: {
             dist: {
                 files: [{
-        expand: true,
-        cwd: 'app/scss',
-        src: ['**/*.scss'],
-        dest: 'dist/css',
-        ext: '.css'
-      }]
+                    expand: true,
+                    cwd: 'app/scss',
+                    src: ['**/*.scss'],
+                    dest: 'dist/css',
+                    ext: '.css'
+                }]
             }
         },
         pug: {
@@ -28,20 +28,32 @@ module.exports = function (grunt) {
         copy: {
             img: {
                 expand: true,
-                cwd: 'app/img/', 
+                cwd: 'app/img/',
                 src: ['**'],
-                dest: 'dist/img/',
+                dest: 'dist/img/'
+            },
+            fonts: {
+                expand: true,
+                cwd: 'app/font/',
+                src: ['**'],
+                dest: 'dist/font/'
+            },
+            js: {
+                expand: true,
+                cwd: 'app/js/',
+                src: ['**'],
+                dest: 'dist/js/'
             }
         },
         watch: {
             pug: {
                 files: ['app/**/*.pug'],
                 tasks: ['pug']
-             }
-            // sass: {
-            //     files: ['app/scss/*.scss'],
-            //     tasks: ['sass']
-            // }
+            },
+            sass: {
+                files: ['app/scss/**/*.scss'],
+                tasks: ['sass']
+            }
         }
     });
     grunt.registerTask('dev', [

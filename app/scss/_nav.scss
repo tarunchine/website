@@ -1,0 +1,17 @@
+.navbar-toggleable-md {
+    background-color: $primaryColor;
+    .navbar-nav {
+        .nav-item {
+            padding-left: 1rem;
+            a {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                color: #fff;
+                border-color: #ccc;
+            }
+        }
+        .nav-item.active a {
+            background-color: $secondaryColor;
+        }
+    }
+}
